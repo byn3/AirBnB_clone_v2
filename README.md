@@ -106,30 +106,27 @@ look up how to linux
 
 
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**What is Fabric?**
+*.*  
 
+**How to deploy code to a server easily?**
+*.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**What is a tgz archive?**
+*.*  
 
+**How to execute Fabric command locally?**
+*.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**How to execute Fabric command remotely?**
+*.*  
 
+**How to transfer files with Fabric?**
+*.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**How to manage Nginx configuration?**
+*.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**What is the difference between root and alias in a Nginx configuration?**
+*.*  
 
