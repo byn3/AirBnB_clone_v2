@@ -103,3 +103,33 @@ wut?
 
 **How to use environment variables?**  
 look up how to linux  
+
+
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
+**How to map a Python Class to a MySQL table?**
+Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+
