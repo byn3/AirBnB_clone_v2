@@ -104,32 +104,29 @@ wut?
 **How to use environment variables?**  
 look up how to linux  
 
+#### NEXT PART. DEPLOYING STATIC
 
+**What is Fabric?**
+*Fabric is a python library used for streamlining the use of SSH for app deployment or sysadmin tasks.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**How to deploy code to a server easily?**
+*Place a .py file in a module. Then call on the function with fab. So If I had a def fibo function I can say fab fibo.*  
 
+**What is a tgz archive?**
+*A compressed archive file with the TGZ or TAR.GZ extension. SImilar to zip, it has many files that can be opened after extracting.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**How to execute Fabric command locally?**
+*https://docs.fabfile.org/en/2.4/getting-started.html#run-commands-via-connections-and-run.*  
 
+**How to execute Fabric command remotely?**
+*https://docs.fabfile.org/en/2.4/getting-started.html#run-commands-via-connections-and-run.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**How to transfer files with Fabric?**
+*https://docs.fabfile.org/en/2.4/getting-started.html#run-commands-via-connections-and-run.*  
 
+**How to manage Nginx configuration?**
+*https://docs.nginx.com/nginx/admin-guide/.*  
 
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
-
-**How to map a Python Class to a MySQL table?**
-Using an ORM, with SQLAlchemy. https://www.sqlalchemy.org/
+**What is the difference between root and alias in a Nginx configuration?**
+*https://stackoverflow.com/questions/10631933/nginx-static-file-serving-confusion-with-root-alias.*  
 
