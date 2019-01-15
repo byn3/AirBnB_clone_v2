@@ -12,5 +12,5 @@ sudo touch /data/web_static/releases/test/index.html
 sudo echo "<html><head>poooop</head>Poop.</html>" | sudo tee -a /data/web_static/releases/test/index.html
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chmod -R u+g /data/
-sudo sed -i "29i location /hbnb_static{\nalias /data/web_static/current/;\n}" /etc/nginx/sites-available/default
+sudo sed -i --follow-symlink "29i location /hbnb_static{\nalias /data/web_static/current/;autoindex off;\n}" /etc/nginx/sites-available/default
 sudo service nginx restart
