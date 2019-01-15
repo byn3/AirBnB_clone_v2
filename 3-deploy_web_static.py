@@ -31,7 +31,7 @@ def do_deploy(archive_path):
         last = archive_path.split("/")[-1]
         # and this will be the stuff without the dot extension
         foldName = "/data/web_static/releases/" + last.split(".")[0]
-
+        # comments for bwlow locasted in number 2
         put(archive_path, "/tmp/")
         run("sudo mkdir -p {}".format(foldName))
         run("sudo tar -xzf /tmp/{} -C {}".format(last, foldName))
@@ -43,6 +43,7 @@ def do_deploy(archive_path):
     except:
         return False
     return True
+
 
 def deploy():
     """ Packs and deploys. This is with no args or kwargs. """
