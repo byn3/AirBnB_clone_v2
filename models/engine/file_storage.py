@@ -73,3 +73,7 @@ class FileStorage:
         # except:
         # print("BRING SAD PEPE AND THICC SEAHORSE BACK")
         # print("THE OBJECT: {}".format(obj))
+
+    def close(self):
+        """ calls on reload """
+        reload(self)
