@@ -8,8 +8,14 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
+@app.route("/")
+def hello():
+    """ root routing """
+    return "Hello HBNB!"
+    
 @app.route("/hbnb")
 def hello1():
+    """ hbnb extension """
     return "HBNB!"
 
 if __name__ == "__main__":
