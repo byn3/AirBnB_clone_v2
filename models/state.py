@@ -3,6 +3,8 @@
 from models.base_model import Base, BaseModel
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship, backref
+from os import environ
+import models
 
 
 class State(BaseModel, Base):
@@ -17,12 +19,12 @@ class State(BaseModel, Base):
                           backref="states",
                           cascade="all, delete-orphan")
 
-    @property
-    def cities(self):
-        """ getter attribute that connects relationship"""
-        objects = storage.all()
-        cities = []
-        for k, v in my_dict.items():
-            if "City" in k and v.state_id == self.id:
-                cities.append(v)
-        return cities
+    if environ.get('HBNB_TYPE_STORAGE') != 'db':
+        @property
+        def cities(self):
+            """ getter attribute that connects relationship"""
+            cities = [
+                value for key, value in models.storage.all(models.City).items()
+                if value.state_id == self.id
+            ]
+            return cities
