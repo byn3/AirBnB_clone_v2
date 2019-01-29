@@ -12,7 +12,8 @@ app.url_map.strict_slashes = False
 def hello():
     """ root routing """
     return "Hello HBNB!"
-    
+
+
 @app.route("/hbnb")
 def hello1():
     """ hbnb extension """

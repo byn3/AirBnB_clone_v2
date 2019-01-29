@@ -13,10 +13,12 @@ def hello():
     """ root of site """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb")
 def hello1():
     """ extension of hbnb """
     return "HBNB!"
+
 
 @app.route("/c/<text>")
 def hello2(text):
@@ -24,10 +26,12 @@ def hello2(text):
     gString = "C " + str(text)
     return gString.replace("_", " ")
 
+
 @app.route("/python")
 def hello3():
     """ python route """
     return "Python is cool"
+
 
 @app.route("/python/<text>")
 def hello3half(text):
@@ -35,15 +39,18 @@ def hello3half(text):
     gString = "Python " + str(text)
     return gString.replace("_", " ")
 
+
 @app.route("/number/<int:n>")
 def hello4(n):
     """ comment describing what this basic flask thing does """
     gString = str(n) + " is a number"
     return gString
 
+
 @app.route("/number_template/<int:n>")
 def hello5(n):
     return render_template('5-number.html', number=n)
+
 
 @app.route("/number_odd_or_even/<int:n>")
 def hello6(n):
