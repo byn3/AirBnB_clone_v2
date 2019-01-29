@@ -18,6 +18,13 @@ class DBStorage:
     """
     __engine = None
     __session = None
+    __clsdict = {"User": User,
+                 "State": State,
+                 "City": City,
+                 "Amenity": Amenity,
+                 "Place": Place,
+                 "Review": Review
+                 }
 
     def __init__(self):
         """ the initializersz
@@ -37,14 +44,13 @@ class DBStorage:
         """ returns a dictionary of all objects """
         my_dict = {}
         if cls is None:
-            for c in [State, City, User, Amenity, Place, Review]:
-                for obj in self.__session.query(c).all():
-                    key = obj.__class__.__name__ + '.' + str(obj.id)
-                    my_dict[key] = obj
+            for key, cls in self.__clsdict.items():
+                for obj in self.__session.query(cls):
+                    my_dict["{}.{}".format(cls.__name__, obj.id)] = obj
         else:
-            for obj in self.__session.query(cls).all():
-                key = cls + '.' + str(obj.id)
-                my_dict[key] = obj
+            for obj in self.__session.query(self.__clsdict.get(cls)):
+                my_dict["{}.{}".format(
+                            self.__clsdict.get(cls).__name__, obj.id)] = obj
         return my_dict
 
     def new(self, obj):
