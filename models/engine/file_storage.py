@@ -19,6 +19,14 @@ class FileStorage:
     """
     __file_path = "file.json"
     __objects = {}
+    __clsdict = {
+        "User": User,
+        "State": State,
+        "City": City,
+        "Amenity": Amenity,
+        "Place": Place,
+        "Review": Review
+    }
 
     def all(self, cls=None):
         """returns a dictionary
@@ -33,6 +41,27 @@ class FileStorage:
             return objects
         else:
             return self.__objects
+
+    """
+        def all(self, cls=None):
+        "returns a dictionary
+        Return:
+            returns a dictionary of __object
+        "
+        if isinstance(cls, str):
+            self.__clsdict.get(cls)
+        else:
+            cls = cls
+        if cls is not None:
+            objects = {}
+            for k, v in self.__objects.items():
+                if cls.__module__[7:].capitalize() in k:
+                    objects[k] = v
+            return objects
+        else:
+            return self.__objects
+    """
+
 
     def new(self, obj):
         """sets __object to given obj

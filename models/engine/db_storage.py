@@ -53,6 +53,24 @@ class DBStorage:
                             self.__clsdict.get(cls).__name__, obj.id)] = obj
         return my_dict
 
+    """
+    def all(self, cls=None):
+         returns a dictionary of all objects "
+        my_dict = {}
+        if isinstance(cls, str):
+            self.__clsdict.get(cls)
+        else:
+            cls = cls
+        if cls:
+            for obj in self.__session.query(cls):
+                my_dict["{}.{}".format(cls.__name__, obj.id)] = obj
+            return my_dict
+        for key, cls in self.__clsdict.items():
+            for obj in self.__session.query(cls):
+                my_dict["{}.{}".format(cls.__name__, obj.id)] = obj
+        return my_dict
+    """
+
     def new(self, obj):
         """ adds object to the current database session """
         self.__session.add(obj)
@@ -72,7 +90,11 @@ class DBStorage:
         self.__session = scoped_session(sessionmaker(
             bind=self.__engine,
             expire_on_commit=False))
+        """
+        factory = sessionmaker(bind=self.__engine, expire_on_commit=True)
+        self.__session = scoped_session(factory)()
+        """
 
     def close(self):
         """ closes or removes a private session """
-        self.__session.remove()
+        self.__session.close()
