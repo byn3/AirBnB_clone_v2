@@ -121,6 +121,7 @@ def hello9(state_id=None):
     return render_template(
             "9-states.html", state=array, state_id=state_id, l=len(array))
 
+
 @app.teardown_appcontext
 def teardown_db3(POOO):
     """ tears down the P """
