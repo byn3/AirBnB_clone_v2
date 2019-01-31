@@ -65,13 +65,13 @@ def teardown_db(response_or_exec):
     """ tears down the db """
     storage.close()
 
+
 @app.route("/states_list")
 def hello7():
     """ sets up the states """
     array = list(storage.all("State").values())
     array.sort(key=lambda array: array.name)
     return render_template('7-states_list.html', elements=array)
-
 
 
 if __name__ == "__main__":
