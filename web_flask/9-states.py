@@ -92,9 +92,19 @@ def teardown_db2(POOO):
 
 
 @app.route("/states")
+def hello9half():
+    """ a comment """
+    array = list(storage.all("State").values())
+    # array = list(array.values())
+    array.sort(key=lambda array: array.name)
+    return render_template("9-states.html",
+                           state=array, state_id=None, l=len(array))
+
+
 @app.route("/states/<state_id>")
 def hello9(state_id=None):
     """ sets up the cities in states """
+
     array = storage.all("State")
     if state_id:
         state = array.get("State.{}".format(state_id))
@@ -110,7 +120,6 @@ def hello9(state_id=None):
         state.cities.sort(key=lambda array: array.name)
     return render_template(
             "9-states.html", state=array, state_id=state_id, l=len(array))
-
 
 @app.teardown_appcontext
 def teardown_db3(POOO):
