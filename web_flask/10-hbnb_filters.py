@@ -125,7 +125,7 @@ def hello10():
     stateArray.sort(key=lambda array: array.name)
     for state in stateArray:
         state.cities.sort(key=lambda array: array.name)
-    amenities=list(storage.all("Amenity").values())
+    amenities = list(storage.all("Amenity").values())
     amenities.sort(key=lambda array: array.name)
     return render_template(
             "10-hbnb_filters.html",
